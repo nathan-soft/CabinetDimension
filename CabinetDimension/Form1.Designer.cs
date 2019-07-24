@@ -31,6 +31,12 @@
             this.tabTopCabinet = new System.Windows.Forms.TabControl();
             this.tbpTopCabinet = new System.Windows.Forms.TabPage();
             this.tbpBottomCabinet = new System.Windows.Forms.TabPage();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clumQuantity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnCalculateBottomDimension = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.txtPlywoodThickness = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -46,12 +52,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.nupdQuantity = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnCalculateBottomDimension = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clumQuantity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabTopCabinet.SuspendLayout();
             this.tbpBottomCabinet.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -74,7 +74,7 @@
             this.tbpTopCabinet.Location = new System.Drawing.Point(4, 22);
             this.tbpTopCabinet.Name = "tbpTopCabinet";
             this.tbpTopCabinet.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpTopCabinet.Size = new System.Drawing.Size(515, 406);
+            this.tbpTopCabinet.Size = new System.Drawing.Size(603, 481);
             this.tbpTopCabinet.TabIndex = 0;
             this.tbpTopCabinet.Text = "Top Cabinet";
             this.tbpTopCabinet.UseVisualStyleBackColor = true;
@@ -92,6 +92,50 @@
             this.tbpBottomCabinet.Text = "Bottom Cabinet";
             this.tbpBottomCabinet.UseVisualStyleBackColor = true;
             this.tbpBottomCabinet.Click += new System.EventHandler(this.tbpBottomCabinet_Click);
+            // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader3,
+            this.columnHeader2,
+            this.clumQuantity});
+            this.listView1.Location = new System.Drawing.Point(9, 237);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(340, 156);
+            this.listView1.TabIndex = 2;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Name";
+            this.columnHeader1.Width = 80;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Length(cm)";
+            this.columnHeader3.Width = 80;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Width(cm)";
+            this.columnHeader2.Width = 80;
+            // 
+            // clumQuantity
+            // 
+            this.clumQuantity.Text = "Quantity";
+            this.clumQuantity.Width = 80;
+            // 
+            // btnCalculateBottomDimension
+            // 
+            this.btnCalculateBottomDimension.Location = new System.Drawing.Point(408, 184);
+            this.btnCalculateBottomDimension.Name = "btnCalculateBottomDimension";
+            this.btnCalculateBottomDimension.Size = new System.Drawing.Size(111, 34);
+            this.btnCalculateBottomDimension.TabIndex = 1;
+            this.btnCalculateBottomDimension.Text = "Calculate";
+            this.btnCalculateBottomDimension.UseVisualStyleBackColor = true;
+            this.btnCalculateBottomDimension.Click += new System.EventHandler(this.btnCalculateBottomDimension_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -256,50 +300,6 @@
             this.label6.Size = new System.Drawing.Size(99, 13);
             this.label6.TabIndex = 12;
             this.label6.Text = "Plywood Thickness";
-            // 
-            // btnCalculateBottomDimension
-            // 
-            this.btnCalculateBottomDimension.Location = new System.Drawing.Point(408, 183);
-            this.btnCalculateBottomDimension.Name = "btnCalculateBottomDimension";
-            this.btnCalculateBottomDimension.Size = new System.Drawing.Size(111, 34);
-            this.btnCalculateBottomDimension.TabIndex = 1;
-            this.btnCalculateBottomDimension.Text = "Calculate";
-            this.btnCalculateBottomDimension.UseVisualStyleBackColor = true;
-            this.btnCalculateBottomDimension.Click += new System.EventHandler(this.btnCalculateBottomDimension_Click);
-            // 
-            // listView1
-            // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader3,
-            this.columnHeader2,
-            this.clumQuantity});
-            this.listView1.Location = new System.Drawing.Point(9, 237);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(340, 156);
-            this.listView1.TabIndex = 2;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Name";
-            this.columnHeader1.Width = 80;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Width(cm)";
-            this.columnHeader2.Width = 80;
-            // 
-            // clumQuantity
-            // 
-            this.clumQuantity.Text = "Quantity";
-            this.clumQuantity.Width = 80;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Length(cm)";
-            this.columnHeader3.Width = 80;
             // 
             // Form1
             // 
