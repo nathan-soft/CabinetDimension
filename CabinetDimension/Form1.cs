@@ -48,9 +48,21 @@ namespace CabinetDimension
             listView1.Items.AddRange(new ListViewItem[] { sides, floors, strips, doors });
         }
 
-        private void tbpBottomCabinet_Click(object sender, EventArgs e)
+        private void btnCalTopCabinet_Click(object sender, EventArgs e)
         {
+            var H = float.Parse(txtTopCabHeight.Text);
+            var D = float.Parse(txtTopCabDepth.Text);
+            var W = float.Parse(txtTopCabWidth.Text);
+            var T = float.Parse(txtTopCabPlywoodThickness.Text);
+            var N = W - (2 * T);
+            var Q = int.Parse(nupdTopCabQuantity.Value.ToString());
 
+            var sides = new ListViewItem(new string[] { "sides", H.ToString(), D.ToString(), (2 * Q).ToString() });
+            var tbm = new ListViewItem(new string[] { "top | bottom | middle", N.ToString(), D.ToString(), (3 * Q).ToString() });
+            var doors = new ListViewItem(new string[] { "doors", (W / 2).ToString(), H.ToString(), (2 * Q).ToString() });
+
+            lstvTopCabinet.Items.Clear();
+            lstvTopCabinet.Items.AddRange(new ListViewItem[] { sides, tbm, doors });
         }
     }
 }
